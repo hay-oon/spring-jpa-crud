@@ -10,7 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -45,4 +47,13 @@ public class UserController {
         userService.delete(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Map<String, Object>> delete(@PathVariable Integer id) {
+//        userService.delete(id);
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("삭제된 ID", id);
+//        response.put("상태", "success");
+//        return ResponseEntity.ok(response);
+//    }
 }
