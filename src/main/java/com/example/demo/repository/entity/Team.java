@@ -22,7 +22,7 @@ public class Team {
     private String description;
     private LocalDateTime createdAt;
     
-    @OneToMany(mappedBy = "team")
+    @OneToMany
     private List<User> users;
     
     public static Team create(String name, String description) {
