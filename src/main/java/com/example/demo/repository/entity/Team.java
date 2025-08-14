@@ -21,17 +21,18 @@ public class Team {
     private String name;
     private String description;
     private LocalDateTime createdAt;
-    
-    @OneToMany
-    private List<User> users;
+
+// 단방향 매핑 -> 생략 //  왜 Team은 단방향?
+//    @OneToMany
+//    private List<User> users;
     
     public static Team create(String name, String description) {
         return new Team(
                 null,
                 name,
                 description,
-                LocalDateTime.now(),
-                new ArrayList<>()
+                LocalDateTime.now()
+//                new ArrayList<>()
         );
     }
 }
